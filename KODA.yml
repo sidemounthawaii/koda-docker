@@ -1,4 +1,3 @@
-version: "3"
 services:
   pihole:
     container_name: pihole
@@ -9,7 +8,7 @@ services:
       - "8080:80/tcp"
     environment:
       TZ: 'Asia/Tokyo'
-      WEBPASSWORD: 'Kodamol337!'  # <-- Change this to your password
+      FTLCONF_webserver_api_password: 'yourpassword'
     volumes:
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'
